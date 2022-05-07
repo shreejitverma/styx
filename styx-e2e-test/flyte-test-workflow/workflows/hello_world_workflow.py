@@ -17,9 +17,7 @@ def hello_world(
   styx_trigger_type: str,
   styx_workflow_id: str
 ) -> str:
-    hello = print_hello_world()
-
-    return hello
+    return print_hello_world()
 
 
 lp = LaunchPlan.create("morning_greeting", hello_world, auth_role=AuthRole(kubernetes_service_account="e2e-test-sa"))
